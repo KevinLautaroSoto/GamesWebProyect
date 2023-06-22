@@ -19,11 +19,14 @@ module.exports = (sequelize) => {
     },
     platform: {
       type: DataTypes.ENUM([
-        "Xbox 360",
-        "Playstation 4",
-        "Playstation 5",
-        "Xbox S",
-        "Xbox X",
+        "PC",
+        "PlayStation 4",
+        "PlayStation 5",
+        "Xbox One",
+        "Xbox Series S/X",
+        "Nintendo Switch",
+        "iOS",
+        "Android"
       ]),
       allowNull: false,
     },
