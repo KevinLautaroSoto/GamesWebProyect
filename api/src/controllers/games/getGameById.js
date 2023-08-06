@@ -1,7 +1,7 @@
-const { Games } = require("../db");
+const { Videogames } = require("../../db");
 
 const getGameById = async () => {
-    const Game = await Games.findByPk(id.toUpperCase());
+    const Game = await Videogames.findByPk(id.toUpperCase());
     return Game;
 }
 
