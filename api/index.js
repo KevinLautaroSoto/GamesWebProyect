@@ -19,7 +19,8 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const tryAPI = require('./src/handlers/db/loadDb.js')
+// const tryAPI = require('./src/handlers/db/loadDb.js');
+const loadGenreDb = require('./src/handlers/db/loadGenreDb.js');
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
@@ -28,6 +29,6 @@ conn.sync({ force: true }).then(() => {
   });
 })
 .then( () => {
-  tryAPI();
-  console.log("ejecutar funcion que carga la base de datos.");
+  loadGenreDb();
+  // tryAPI(); para probar el funcionamiento de la API esta en loadDB.js
 });

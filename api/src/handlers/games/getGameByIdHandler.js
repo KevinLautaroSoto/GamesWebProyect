@@ -1,7 +1,7 @@
-const { getGameById} = require("../../controllers/games/getGameById");
+const getGameById = require("../../controllers/games/getGameById");
 
 const getGameByIdHandler = async (req, res) => {
-    const { id } = req.query;
+    const { id } = req.params;
     try {
         let games = await getGameById(id);
         res.status(200).json(games) 
