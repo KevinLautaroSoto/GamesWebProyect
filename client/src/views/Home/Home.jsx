@@ -15,8 +15,8 @@ const Home = () => {
         const games = useSelector((state) => state.games);
 
     return (
-        <div className="">
-            <p>Este es el Home</p>
+        <div >
+            <h1 className="text-3xl" >Este es el Home</h1>
             <CardContainer 
                 games={games}         
             />
